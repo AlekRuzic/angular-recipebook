@@ -1,10 +1,21 @@
 import { Component } from '@angular/core';
 
 @Component({
-  selector: 'app-root',
-  templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css']
+  selector: "app-root",
+  templateUrl: "./app.component.html",
+  styleUrls: ["./app.component.css"]
 })
 export class AppComponent {
-  title = 'recipe-project';
+  loadedFeature = 'recipe';
+
+  title = "recipe-project";
+
+  ngDoCheck() {
+    console.log('test');
+  }
+
+  onNavigate(feature: string) {
+    this.loadedFeature = feature;
+  }
+
 }
